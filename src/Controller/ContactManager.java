@@ -9,8 +9,13 @@ public class ContactManager {
     private ConsoleView cV = new ConsoleView();
 
     public ContactManager(LinkedList<Contact<String, String>> contacts) {
+        this.contacts = contacts;
+    }
+
+    public ContactManager() {
         this.contacts = new LinkedList<>();
     }
+
     
     public void addContact(Contact<String,String> contact){
         contacts.appenedToTail(contact);
@@ -52,6 +57,23 @@ public class ContactManager {
 
         cV.showMessage("Contacto no encontrado.");
     }
+
+    public void printList() {
+        Node<Contact<String, String>> current = contacts.getHead();
+
+        if (current == null) {
+            cV.showMessage("La lista de contactos está vacía.");
+            return;
+        }
+
+        cV.showMessage("Lista de contactos:");
+
+        while (current != null) {
+            cV.showMessage(current.getValue().toString());
+            current = current.getNext();
+        }
+    }
+
 
 
 }

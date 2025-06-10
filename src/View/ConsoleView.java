@@ -15,9 +15,9 @@ public class ConsoleView{
         System.out.println("5. Salir");
     }
 
-    public String getInput(){
-         String prompt  = scanner.nextLine();
-         return prompt;
+    public String getInput(String prompt){
+         System.out.println(prompt);
+         return scanner.nextLine();
     }
 
     public void showMessage(String message){
