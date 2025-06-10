@@ -8,9 +8,6 @@ public class ContactManager {
     private LinkedList<Contact<String,String>> contacts;
     private ConsoleView cV = new ConsoleView();
 
-    public ContactManager(LinkedList<Contact<String, String>> contacts) {
-        this.contacts = contacts;
-    }
 
     public ContactManager() {
         this.contacts = new LinkedList<>();
