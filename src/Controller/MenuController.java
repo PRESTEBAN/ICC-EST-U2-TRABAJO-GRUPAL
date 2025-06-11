@@ -18,7 +18,7 @@ public class MenuController {
     String option;
 
     do {
-        consoleView.displayMenu(); // Muestra el menú
+        consoleView.displayMenu(); 
         option = consoleView.getInput("Seleccione una opción:");
 
         switch (option) {
